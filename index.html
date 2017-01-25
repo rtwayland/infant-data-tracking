@@ -5,65 +5,16 @@
     <meta charset="utf-8">
     <title>Infant Data Tracking</title>
     <!-- <link rel="stylesheet" href="styles/main.css"> -->
-    <style>
-        #graph-container {
-            margin: auto;
-            display: block;
-        }
-
-        .node {
-            cursor: pointer;
-        }
-
-        .node:hover {
-            stroke: #000;
-            stroke-width: 1.5px;
-        }
-
-        .node--leaf {
-            fill: white;
-        }
-
-        .label {
-            font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-            text-anchor: middle;
-            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-            /*background-color: rgba(255,255,255, 0.7);
-            padding: 5px;*/
-        }
-
-        .label,
-        .node--root,
-        .node--leaf {
-            pointer-events: none;
-        }
-    </style>
 </head>
 
-<body ng-controller="NapController">
-    <!-- <svg id="graph-container" width="900" height="900"></svg> -->
-
-    <h1>Manual Time Entry</h1>
-    <label for="start-time">Start Time:</label>
-    <input type="time" name="start-time" id="start-time" ng-model="startTime">
-    <br>
-    <label for="end-time">End Time:</label>
-    <input type="time" name="end-time" id="end-time" ng-model="endTime">
-    <br>
-    <button type="button" ng-click="getTimeElapsed()">Generate Time Elapsed</button>
-    <p>Time elapsed: {{ timeElapsed }}</p>
-
-
-    <h1>Run Timer</h1>
-    <button type="button" ng-click="startTimer()">Start Timer</button>
-    <button type="button" ng-if="beginning" ng-click="stopTimer()">Stop Timer</button>
-    <p>Time elapsed: {{timer}}</p>
-    <p ng-if="timerResult">{{ timerResult }}</p>
-
-
-
-
-
+<body>
+<nav>
+  <ul>
+    <li><a ui-sref="home">Home</a></li>
+    <li><a ui-sref="naps">Naps</a></li>
+  </ul>
+</nav>
+    <ui-view></ui-view>
 
 
     <!-- Firebase -->
@@ -78,8 +29,14 @@
     <!-- <script src="js/d3-circle-packing.js"></script> -->
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.2.0/angularfire.min.js"></script>
+    <!-- UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <!-- Moment -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.min.js"></script>
+    <!-- My Scripts -->
     <script src="js/app.js"></script>
     <script src="js/controllers/NapController.js"></script>
     <script src="js/services/NapService.js"></script>

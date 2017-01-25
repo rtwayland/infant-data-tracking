@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('NapController', function($scope, moment, $interval) {
+    .controller('NapController', function($scope, moment, $interval, NapService) {
         $scope.getTimeElapsed = function() {
             $scope.timeElapsed = $scope.generateTimeElapsed($scope.startTime, $scope.endTime);
         };
@@ -38,6 +38,10 @@ angular.module('app')
                     return seconds + ' sec';
                 }
             }
+        };
+
+        $scope.submitTime = function () {
+          NapService.submitTime($scope.timerResult);
         };
 
     });

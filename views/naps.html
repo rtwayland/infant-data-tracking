@@ -1,0 +1,18 @@
+<h1>Manual Time Entry</h1>
+<label for="start-time">Start Time:</label>
+<input type="time" name="start-time" id="start-time" ng-model="startTime">
+<br>
+<label for="end-time">End Time:</label>
+<input type="time" name="end-time" id="end-time" ng-model="endTime">
+<br>
+<button type="button" ng-click="getTimeElapsed()">Generate Time Elapsed</button>
+<p>Time elapsed: {{ timeElapsed }}</p>
+
+
+<h1>Run Timer</h1>
+<button type="button" ng-click="startTimer()">Start Timer</button>
+<button type="button" ng-if="beginning" ng-click="stopTimer()">Stop Timer</button>
+<p>Time elapsed: {{timer}}</p>
+<p ng-if="timerResult">{{ timerResult }}</p>
+
+<button type="button" ng-click="submitTime()">Submit Time</button>
