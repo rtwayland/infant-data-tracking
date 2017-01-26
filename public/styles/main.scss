@@ -1,3 +1,19 @@
+$color-warning: tomato;
+$color-success: #2ebc76;
+$color-blue: #67b2c7;
+$color-grey: #dbdad6;
+$width-timer-button: 100px;
+$font-main: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@mixin absoluteCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+* {
+    box-sizing: border-box;
+}
 // D3 SVG
 
 #graph-container {
@@ -22,8 +38,6 @@
     font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-anchor: middle;
     text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-    /*background-color: rgba(255,255,255, 0.7);
-    padding: 5px;*/
 }
 
 .label,
@@ -31,3 +45,4 @@
 .node--root {
     pointer-events: none;
 }
+@import "partials/basic-timer"

@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box; }
+
+#graph-container {
+  margin: auto;
+  display: block; }
+
+.node {
+  cursor: pointer; }
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px; }
+
+.node--leaf {
+  fill: white; }
+
+.label {
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff; }
+
+.label,
+.node--leaf,
+.node--root {
+  pointer-events: none; }
+
+#basic-timer {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto; }
+  #basic-timer.timer-container {
+    display: table;
+    min-height: 100px; }
+  #basic-timer .timer-piece {
+    display: table-cell;
+    height: 100%; }
+  #basic-timer .timer-button {
+    text-align: center;
+    min-width: 100px;
+    position: relative;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 1.3em; }
+    #basic-timer .timer-button span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+  #basic-timer .submit-time {
+    background-color: #67b2c7; }
+  #basic-timer .stop-time {
+    background-color: tomato; }
+  #basic-timer .resume-time,
+  #basic-timer .start-time {
+    background-color: #2ebc76; }
+  #basic-timer .cancel-time {
+    background-color: tomato; }
+  #basic-timer .time-container {
+    background-color: #dbdad6;
+    min-width: 30%; }
+    #basic-timer .time-container .time-section {
+      position: relative;
+      padding: 20px;
+      display: inline-block;
+      text-align: center; }
+      #basic-timer .time-container .time-section .time {
+        font-size: 2em; }
+
+/*# sourceMappingURL=main.css.map */

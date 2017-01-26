@@ -1,0 +1,60 @@
+#basic-timer {
+    font-family: $font-main;
+    margin: auto;
+
+    &.timer-container {
+        display: table;
+        min-height: 100px;
+    }
+
+    .timer-piece {
+        display: table-cell;
+        height: 100%;
+    }
+
+    .timer-button {
+        text-align: center;
+        min-width: 100px;
+        position: relative;
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 1.3em;
+
+        span {
+            @include absoluteCenter;
+        }
+    }
+
+    .submit-time {
+        background-color: $color-blue;
+    }
+
+    .stop-time {
+        background-color: $color-warning;
+    }
+
+    .resume-time,
+    .start-time {
+        background-color: $color-success;
+    }
+
+    .cancel-time {
+        background-color: $color-warning;
+    }
+
+    .time-container {
+        background-color: $color-grey;
+        min-width: 30%;
+
+        .time-section {
+            position: relative;
+            padding: 20px;
+            display: inline-block;
+            text-align: center;
+
+            .time {
+                font-size: 2em;
+            }
+        }
+    }
+}
