@@ -1,0 +1,72 @@
+{
+    "data": [{
+            "name": "Naps",
+            "data": {
+                "duration": "DATA",
+                "start time": "DATA",
+                "date": "DATA"
+            }
+        },
+        {
+            "name": "Night Sleep",
+            "data": {
+                "duration": "DATA",
+                "date": "DATA",
+                "number of wakings": "DATA",
+                "wakings": [{
+                        "timestamp": "DATA",
+                        "duration": "DATA"
+                    },
+                    {
+                        "timestamp": "DATA",
+                        "duration": "DATA"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Feedings",
+            "data": [{
+                    "name": "Breast Feeding",
+                    "data": {
+                        "duration": "DATA",
+                        "timestamp": "DATA",
+                        "side": "L or R"
+                    }
+                },
+                {
+                    "name": "Bottle Feeding",
+                    "data": {
+                        "timestamp": "DATA",
+                        "amount": "DATA"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Bathroom",
+            "data": {
+                "poo": {
+                    "number": "DATA",
+                    "data": [{
+                            "timestamp": "DATA"
+                        },
+                        {
+                            "timestamp": "DATA"
+                        }
+                    ]
+                },
+                "pee": {
+                    "number": "DATA",
+                    "data": [{
+                            "timestamp": "DATA"
+                        },
+                        {
+                            "timestamp": "DATA"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
