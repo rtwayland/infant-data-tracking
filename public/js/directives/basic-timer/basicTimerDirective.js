@@ -4,7 +4,7 @@ angular.module('app')
             restrict: 'E',
             templateUrl: '/js/directives/basic-timer/basic-timer.html',
             scope: {
-
+              // name: '@'
             },
             link: function($scope, elem, attrs) {
                 setInterval(function() {
