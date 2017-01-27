@@ -34,7 +34,7 @@ angular.module('app', ['ui.router', 'angularMoment', 'firebase'])
                 //         return AuthService.$requireSignIn();
                 //     }
                 // },
-                controller: 'NapController'
+                // controller: 'NapController'
             })
             .state('enter-data.feedings', {
                 url: '/enter-data/feedings',
