@@ -2,6 +2,10 @@ $color-warning: tomato;
 $color-success: #2ebc76;
 $color-blue: #67b2c7;
 $color-grey: #dbdad6;
+$color-yellow: #e5bf1c;
+$color-text-dark: #222;
+$bg-nav: #fff;
+$height-nav: 70px;
 $width-timer-button: 100px;
 $font-main: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @mixin absoluteCenter {
@@ -16,6 +20,11 @@ $font-main: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Hel
 * {
     box-sizing: border-box;
     font-family: $font-main;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 // D3 SVG
 
@@ -48,4 +57,55 @@ $font-main: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Hel
 .node--root {
     pointer-events: none;
 }
-@import "partials/basic-timer"
+
+.nav-wrapper {
+    height: $height-nav;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background-color: $bg-nav;
+
+    a {
+        text-decoration: none;
+        color: $color-text-dark;
+        transition: background-color 0.5s linear;
+
+        &:active,
+        &:visited {
+            text-decoration: none;
+            color: $color-text-dark;
+        }
+
+        &:hover,
+        &.current {
+            background-color: $color-yellow;
+            padding: 20px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        white-space: nowrap;
+        padding: 0 25px 0 0;
+
+        li {
+            display: inline-block;
+            font-size: 1.2em;
+            white-space: normal;
+            width: calc(100%/5);
+            text-align: center;
+        }
+    }
+
+    &.visualize-data-nav {
+        li {
+            width: calc(100%/6);
+        }
+    }
+}
+@import "partials/home";
+@import "partials/basic-timer";

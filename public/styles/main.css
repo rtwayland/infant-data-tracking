@@ -2,6 +2,10 @@
   box-sizing: border-box;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+body {
+  margin: 0;
+  padding: 0; }
+
 #graph-container {
   margin: auto;
   display: block; }
@@ -26,9 +30,73 @@
 .node--root {
   pointer-events: none; }
 
+.nav-wrapper {
+  height: 70px; }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color: #fff; }
+  .navbar a {
+    text-decoration: none;
+    color: #222;
+    transition: background-color 0.5s linear; }
+    .navbar a:active, .navbar a:visited {
+      text-decoration: none;
+      color: #222; }
+    .navbar a:hover, .navbar a.current {
+      background-color: #e5bf1c;
+      padding: 20px; }
+  .navbar ul {
+    list-style: none;
+    white-space: nowrap;
+    padding: 0 25px 0 0; }
+    .navbar ul li {
+      display: inline-block;
+      font-size: 1.2em;
+      white-space: normal;
+      width: calc(100%/5);
+      text-align: center; }
+  .navbar.visualize-data-nav li {
+    width: calc(100%/6); }
+
+.home-container h1,
+.home-container h2 {
+  text-align: center;
+  color: #222; }
+.home-container .option-container {
+  width: 50%;
+  height: 40vh;
+  margin: auto;
+  display: table; }
+  .home-container .option-container .enter-data,
+  .home-container .option-container .visualize-data {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    font-size: 3em;
+    cursor: pointer;
+    border-radius: 1px;
+    color: #222; }
+    .home-container .option-container .enter-data span,
+    .home-container .option-container .visualize-data span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  .home-container .option-container .enter-data {
+    background-color: #2ebc76; }
+  .home-container .option-container .visualize-data {
+    background-color: #67b2c7; }
+
 #basic-timer {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto; }
+  margin: auto;
+  color: #222; }
   #basic-timer.timer-container {
     display: table;
     min-height: 100px; }

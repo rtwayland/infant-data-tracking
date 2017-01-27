@@ -1,0 +1,37 @@
+.home-container {
+    h1,
+    h2 {
+        text-align: center;
+        color: $color-text-dark;
+    }
+
+    .option-container {
+        width: 50%;
+        height: 40vh;
+        margin: auto;
+        display: table;
+
+        .enter-data,
+        .visualize-data {
+            position: relative;
+            display: table-cell;
+            text-align: center;
+            font-size: 3em;
+            cursor: pointer;
+            border-radius: 1px;
+            color: $color-text-dark;
+
+            span {
+                @include absoluteCenter;
+            }
+        }
+
+        .enter-data {
+            background-color: $color-success;
+        }
+
+        .visualize-data {
+            background-color: $color-blue;
+        }
+    }
+}
