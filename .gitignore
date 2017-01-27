@@ -1,4 +1,4 @@
-/js/config.js
+firebaseConfig.js
 node_modules/
 npm-debug.log
 yarn.lock

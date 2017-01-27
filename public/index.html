@@ -7,22 +7,15 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body ng-controller="HomeController">
-    <!-- <nav>
-        <ul>
-            <li><a ui-sref="home">Home</a></li>
-            <li><a ui-sref="naps">Naps</a></li>
-            <li><a ui-sref="login">Login</a></li>
-            <li style="cursor: pointer" ng-click="logout()">Log Out</li>
-        </ul>
-    </nav> -->
-    <basic-timer></basic-timer>
+<body>
+    
+
     <ui-view></ui-view>
 
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-    <script src="js/config.js"></script>
+    <script src="firebaseConfig.js"></script>
     <script>
         // Initialize Firebase
         firebase.initializeApp(config);
@@ -42,6 +35,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- My Scripts -->
+    <!-- <script src="./dist/js/bundle.js"></script> -->
     <script src="js/app.js"></script>
     <!-- Services -->
     <script src="js/services/FireBaseURL.js"></script>

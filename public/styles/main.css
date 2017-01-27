@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #graph-container {
   margin: auto;
@@ -45,6 +46,8 @@
       position: absolute;
       left: 50%;
       top: 50%;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
   #basic-timer .submit-time {
     background-color: #67b2c7; }
