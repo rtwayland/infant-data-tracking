@@ -67,7 +67,7 @@ body {
   color: #222; }
 .home-container .option-container {
   width: 50%;
-  height: 40vh;
+  height: 300px;
   margin: auto;
   display: table; }
   .home-container .option-container .enter-data,
@@ -91,6 +91,10 @@ body {
     background-color: #2ebc76; }
   .home-container .option-container .visualize-data {
     background-color: #67b2c7; }
+
+.options-container {
+  width: 60%;
+  margin: auto; }
 
 #basic-timer {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;

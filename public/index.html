@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Infant Data Tracking</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -15,14 +15,8 @@
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-    <script src="firebaseConfig.js"></script>
-    <script>
-        // Initialize Firebase
-        firebase.initializeApp(config);
-    </script>
     <!-- D3 -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <!-- <script src="js/d3-circle-packing.js"></script> -->
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
     <!-- AngularFire -->
@@ -35,21 +29,13 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- My Scripts -->
-    <!-- <script src="./dist/js/bundle.js"></script> -->
-    <script src="js/app.js"></script>
-    <!-- Services -->
-    <script src="js/services/FireBaseURL.js"></script>
-    <script src="js/services/AuthService.js"></script>
-    <script src="js/services/NapService.js"></script>
-    <!-- Controllers -->
-    <script src="js/controllers/HomeController.js"></script>
-    <script src="js/controllers/LoginController.js"></script>
-    <script src="js/controllers/NapController.js"></script>
-    <!-- Directives -->
-    <script src="js/directives/basic-timer/basicTimerDirective.js"></script>
-    <script src="js/directives/enter-data-nav/enterDataNavDirective.js"></script>
-    <script src="js/directives/visualize-data-nav/visualizeDataNavDirective.js"></script>
-    <script src="js/directives/formula-entry/formulaEntryDirective.js"></script>
+    <script src="js/bundle.js"></script>
+
+    <script>
+    // Initialize Firebase
+    firebase.initializeApp(config);
+    </script>
+
 </body>
 
 </html>
