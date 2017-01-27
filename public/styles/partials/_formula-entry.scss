@@ -1,0 +1,90 @@
+.formula-card-container {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+
+    .enter-time-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .submit-button {
+        width: 100%;
+        font-size: 2em;
+        background-color: $color-success;
+        padding: 10px 0;
+        border-radius: 1px;
+        cursor: pointer;
+    }
+}
+
+.details-container {
+    background-color: $color-grey;
+    border-radius: 1px;
+    width: 100%;
+    padding: 30px;
+
+    .amount-container,
+    .time-options {
+        width: 85%;
+        margin: auto;
+        overflow: auto;
+        border-radius: 1px;
+
+        div {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+    }
+
+    .amount-container {
+        margin-bottom: 20px;
+        background-color: white;
+
+        .oz-label,
+        .oz-number {
+            font-size: 3em;
+        }
+
+        .oz-number {
+            cursor: pointer;
+
+            input {
+                width: 100%;
+                font-size: 1em;
+                text-align: center;
+                border: none;
+                // outline: none;
+            }
+        }
+    }
+
+    .time-options {
+        .manual,
+        .now {
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: $color-blue;
+
+            &.active {
+                background-color: $color-yellow;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .time-entry-container {
+        padding-top: 20px;
+        width: 85%;
+        margin: auto;
+
+        input {
+            font-size: 2em;
+            width: 100%;
+            text-align: center;
+            padding-left: 22px;
+            border: none;
+        }
+    }
+}

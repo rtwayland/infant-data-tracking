@@ -136,4 +136,68 @@ body {
       #basic-timer .time-container .time-section .time {
         font-size: 2em; }
 
+.formula-card-container {
+  width: 300px;
+  margin: auto;
+  text-align: center; }
+  .formula-card-container .enter-time-label {
+    display: block;
+    margin-bottom: 5px; }
+  .formula-card-container .submit-button {
+    width: 100%;
+    font-size: 2em;
+    background-color: #2ebc76;
+    padding: 10px 0;
+    border-radius: 1px;
+    cursor: pointer; }
+
+.details-container {
+  background-color: #dbdad6;
+  border-radius: 1px;
+  width: 100%;
+  padding: 30px; }
+  .details-container .amount-container,
+  .details-container .time-options {
+    width: 85%;
+    margin: auto;
+    overflow: auto;
+    border-radius: 1px; }
+    .details-container .amount-container div,
+    .details-container .time-options div {
+      float: left;
+      width: 50%;
+      padding: 10px; }
+  .details-container .amount-container {
+    margin-bottom: 20px;
+    background-color: white; }
+    .details-container .amount-container .oz-label,
+    .details-container .amount-container .oz-number {
+      font-size: 3em; }
+    .details-container .amount-container .oz-number {
+      cursor: pointer; }
+      .details-container .amount-container .oz-number input {
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+        border: none; }
+  .details-container .time-options .manual,
+  .details-container .time-options .now {
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #67b2c7; }
+    .details-container .time-options .manual.active,
+    .details-container .time-options .now.active {
+      background-color: #e5bf1c;
+      font-weight: bold; }
+  .details-container .time-entry-container {
+    padding-top: 20px;
+    width: 85%;
+    margin: auto; }
+    .details-container .time-entry-container input {
+      font-size: 2em;
+      width: 100%;
+      text-align: center;
+      padding-left: 22px;
+      border: none; }
+
 /*# sourceMappingURL=main.css.map */
