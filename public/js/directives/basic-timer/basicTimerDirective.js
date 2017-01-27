@@ -12,7 +12,7 @@ angular.module('app')
                     $('#basic-timer .hours').text($scope.hours);
                     $('#basic-timer .minutes').text($scope.minutes);
                     $('#basic-timer .seconds').text($scope.seconds);
-                }, 500);
+                }, 50);
             },
             controller: function($scope, moment, $interval) {
                 $scope.timerInitiated = false;
@@ -32,7 +32,7 @@ angular.module('app')
                         stop = $interval(function() {
                             var now = new Date();
                             timeElapsed = now.getTime() - beginning.getTime();
-                        }, 500);
+                        }, 50);
                     }
                 };
 
