@@ -54,8 +54,8 @@ angular.module('app', ['ui.router', 'angularMoment', 'firebase'])
             // Visualize data children
             .state('visualize-data.naps', {
                 url: '/naps',
-                templateUrl: './views/visualize-data/naps.html'
-                // controller: 'NapController'
+                templateUrl: './views/visualize-data/naps.html',
+                controller: 'NapDataController'
             })
             .state('visualize-data.feedings', {
                 url: '/feedings',
