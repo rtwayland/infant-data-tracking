@@ -69,6 +69,8 @@ angular.module('app')
 
             if (hours && minutes) {
                 return hours + ' hr ' + minutes + ' min';
+            } else if (hours) {
+                return hours + ' hr';
             } else if (minutes) {
                 return minutes + ' min';
             } else {

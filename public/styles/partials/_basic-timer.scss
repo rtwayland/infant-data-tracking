@@ -19,7 +19,7 @@
         position: relative;
         border-radius: 1px;
         cursor: pointer;
-        font-size: 1.3em;
+        font-size: 1.4em;
 
         span {
             @include absoluteCenter;
@@ -37,6 +37,7 @@
     .resume-time,
     .start-time {
         background-color: $color-success;
+        width: 140px;
     }
 
     .cancel-time {

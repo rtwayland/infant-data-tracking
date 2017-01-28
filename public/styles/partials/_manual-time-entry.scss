@@ -1,0 +1,53 @@
+.manual-time-entry-container {
+    max-width: 500px;
+    margin: auto;
+    overflow: auto;
+
+    .input-container {
+        // display: inline-block;
+        float: left;
+        margin-bottom: 10px;
+
+        &.date-input {
+            width: 45%;
+        }
+
+        &.time-input {
+            width: calc(55%/2);
+        }
+
+        input,
+        label {
+            display: block;
+        }
+
+        input {
+            font-size: 1.1em;
+            width: 100%;
+            text-align: center;
+            padding-left: 22px;
+            border: none;
+        }
+
+        label {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+    }
+
+    .submit-button {
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 1px;
+        background-color: $color-blue;
+        color: $color-text-dark;
+        font-size: 1.4em;
+        padding: 10px 0;
+
+        &[disabled] {
+            cursor: not-allowed;
+        }
+    }
+}
