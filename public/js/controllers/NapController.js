@@ -1,47 +1,35 @@
 angular.module('app')
-    .controller('NapController', function($scope, moment, $interval, NapService) {
-        $scope.getTimeElapsed = function() {
-            $scope.timeElapsed = $scope.generateTimeElapsed($scope.startTime, $scope.endTime);
-        };
+    .controller('NapController', function($scope, moment, $interval, NapService, $firebaseObject, $firebaseArray) {
+        // var root = firebase.database().ref('data');
+        // var naps = root.child('naps');
+        // // var rootData = $firebaseObject(root);
+        // var napData = $firebaseObject(naps);
+        //
+        //
+        //
+        //
+        // napData.$loaded()
+        //     .then(function() {
+        //         // console.log('Naps\n', napData);
+        //         napData.data = [];
+        //         napData.data.push({
+        //             duration: "2700000",
+        //             timestamp: "2017-01-27T22:41:46.753Z"
+        //         });
+        //
+        //         napData.$save();
+        //     })
+        //     .catch(function(err) {
+        //         console.error(err);
+        //     });
 
 
-        var stop;
-        $scope.startTimer = function() {
-            $scope.beginning = new moment();
-            stop = $interval(function() {
-                $scope.timer = $scope.generateTimeElapsed($scope.beginning, new moment());
-            }, 1000)
-        };
-        $scope.stopTimer = function() {
-            $scope.ending = new moment();
-            if ($scope.beginning) {
-                $interval.cancel(stop);
-                $scope.timerResult = $scope.generateTimeElapsed($scope.beginning, $scope.ending);
-            }
-        };
 
 
-        $scope.generateTimeElapsed = function(startTime, endTime) {
-            if (startTime && endTime) {
-                var start = moment(startTime, "HH:mm:ss a");
-                var end = moment(endTime, "HH:mm:ss a");
-                var duration = moment.duration(end.diff(start));
-                var hours = parseInt(duration.hours());
-                var minutes = parseInt(duration.minutes());
-                var seconds = duration.seconds();
-
-                if (hours) {
-                    return hours + ' hr ' + minutes + ' min';
-                } else if (minutes) {
-                    return minutes + ' min ' + seconds + ' sec';
-                } else {
-                    return seconds + ' sec';
-                }
-            }
-        };
-
-        $scope.submitTime = function () {
-          NapService.submitTime($scope.timerResult);
+        // console.log('Root\n', rootData);
+        // console.log('Naps\n', napData);
+        $scope.submitTime = function() {
+            NapService.submitTime($scope.timerResult);
         };
 
     });

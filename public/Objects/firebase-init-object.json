@@ -1,0 +1,41 @@
+{
+    "data": [{
+            "naps": [{
+                    "duration": "2700000",
+                    "timestamp": "2017-01-27T22:41:46.753Z"
+                },
+                {
+                    "duration": "2700000",
+                    "timestamp": "2017-01-27T22:41:46.753Z"
+                }
+            ]
+        },
+        {
+            "feedings": [{
+                    "breastfeeding": [{
+                            "duration": "1800000",
+                            "timestamp": "2017-01-27T22:41:46.753Z",
+                            "side": "L"
+                        },
+                        {
+                            "duration": "1800000",
+                            "timestamp": "2017-01-27T22:41:46.753Z",
+                            "side": "R"
+                        }
+                    ]
+                },
+                {
+                    "bottlefeeding": [{
+                            "timestamp": "2017-01-27T22:41:46.753Z",
+                            "amount": "4"
+                        },
+                        {
+                            "timestamp": "2017-01-27T22:41:46.753Z",
+                            "amount": "3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

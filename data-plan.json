@@ -3,7 +3,7 @@
             "name": "Naps",
             "data": {
                 "duration": "DATA",
-                "start time": "DATA",
+                "starttime": "DATA",
                 "date": "DATA"
             }
         },
@@ -44,9 +44,9 @@
             ]
         },
         {
-            "name": "Bathroom",
+            "name": "Diapers",
             "data": {
-                "poo": {
+                "stool": {
                     "number": "DATA",
                     "data": [{
                             "timestamp": "DATA"
@@ -56,7 +56,7 @@
                         }
                     ]
                 },
-                "pee": {
+                "urine": {
                     "number": "DATA",
                     "data": [{
                             "timestamp": "DATA"
