@@ -7,6 +7,8 @@
         background-color: $bg-nav;
         left: 50%;
         transform: translate(-50%);
+        top: 56px;
+        padding-top: 30px;
 
         a {
             text-decoration: none;
@@ -57,5 +59,15 @@
                 padding: 10px;
             }
         }
+    }
+
+    .delete-button {
+        background-color: $color-warning;
+        border: none;
+        outline: none;
+        border-radius: 1px;
+        font-size: 1em;
+        padding: 8px;
+        cursor: pointer;
     }
 }
