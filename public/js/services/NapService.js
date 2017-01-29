@@ -14,7 +14,7 @@ angular.module('app')
                     for (var i = 0; i < dataArray.length; i++) {
                         var obj = {
                             duration: convertMsToMin(dataArray[i].duration),
-                            timestamp: Date.parse(dataArray[i].timestamp)
+                            timestamp: new Date(Date.parse(dataArray[i].timestamp))
                         }
                         newArray.push(obj);
                     }

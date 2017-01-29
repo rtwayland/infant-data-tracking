@@ -1,14 +1,4 @@
 angular.module('app', ['ui.router', 'angularMoment', 'firebase'])
-    // .run(function($rootScope, $state) {
-    //     console.log('in run');
-    //     $rootScope.$on('$routeChangeError', function(e, next, prev, error) {
-    //         console.log('in rootScope');
-    //         if (error === 'AUTH_REQUIRED') {
-    //             console.log('in error');
-    //             $state.go('login');
-    //         }
-    //     });
-    // })
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
 
@@ -76,6 +66,19 @@ angular.module('app', ['ui.router', 'angularMoment', 'firebase'])
                 url: '/week-view',
                 templateUrl: './views/visualize-data/week-view.html'
                 // controller: 'NapController'
+            })
+            // Naps children
+            .state('visualize-data.naps.today', {
+                url: '/today',
+                templateUrl: './views/visualize-data/naps/nap-data-today.html'
+            })
+            .state('visualize-data.naps.all', {
+                url: '/all',
+                templateUrl: './views/visualize-data/naps/nap-data-all.html'
+            })
+            .state('visualize-data.naps.visual', {
+                url: '/visual',
+                templateUrl: './views/visualize-data/naps/nap-data-visual.html'
             });
         // .state('login', {
         //     url: '/login',
