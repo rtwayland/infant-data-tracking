@@ -5,7 +5,7 @@
         <th>Duration</th>
         <th>Start Time</th>
         <th>Date</th>
-        <tr ng-repeat="nap in naps | filter:today">
+        <tr ng-repeat="nap in naps | filter:today | orderBy:'+timestamp'">
             <td>{{ nap.duration }}</td>
             <td>{{ nap.timestamp | date:'shortTime' }}</td>
             <td>{{ nap.timestamp | date:'mediumDate'}}</td>

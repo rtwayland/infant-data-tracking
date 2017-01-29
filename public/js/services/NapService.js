@@ -66,6 +66,7 @@ angular.module('app')
             var duration = moment.duration(ms);
             var hours = duration.hours();
             var minutes = duration.minutes();
+            var seconds = duration.seconds();
 
             if (hours && minutes) {
                 return hours + ' hr ' + minutes + ' min';
@@ -74,7 +75,7 @@ angular.module('app')
             } else if (minutes) {
                 return minutes + ' min';
             } else {
-                return '0';
+                return seconds + ' sec';
             }
         }
     });
