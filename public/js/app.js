@@ -19,13 +19,13 @@ angular.module('app', ['ui.router', 'angularMoment', 'firebase'])
             // Enter data children
             .state('enter-data.naps', {
                 url: '/naps',
-                templateUrl: './views/enter-data/naps.html'
+                templateUrl: './views/enter-data/naps.html',
                 // resolve: {
                 //     currentAuth: function(AuthService) {
                 //         return AuthService.$requireSignIn();
                 //     }
                 // },
-                // controller: 'NapController'
+                controller: 'NapEntryController'
             })
             .state('enter-data.feedings', {
                 url: '/feedings',
