@@ -1,3 +1,4 @@
+$color-highlight: #67b2c7;
 $color-warning: tomato;
 $color-success: #2ebc76;
 $color-blue: #67b2c7;
@@ -82,7 +83,7 @@ body {
 
         &:hover,
         &.current {
-            background-color: $color-yellow;
+            background-color: $color-highlight;
             padding: 20px;
         }
     }
