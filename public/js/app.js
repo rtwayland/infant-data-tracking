@@ -1,6 +1,7 @@
 angular.module('app', ['ui.router', 'angularMoment', 'firebase'])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.when('/visualize-data/naps', '/visualize-data/naps/today');
 
         $stateProvider
             .state('home', {

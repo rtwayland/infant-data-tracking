@@ -1,3 +1,46 @@
+.naps-visualize-container {
+    nav {
+        position: fixed;
+        width: 60%;
+        max-width: 460px;
+        margin: auto;
+        background-color: $bg-nav;
+        left: 50%;
+        transform: translate(-50%);
+
+        a {
+            text-decoration: none;
+            color: $color-text-dark;
+            // transition: background-color 0.5s linear;
+            &:active,
+            &:visited {
+                text-decoration: none;
+                color: $color-text-dark;
+            }
+
+            &.current,
+            &:hover {
+                background-color: $color-highlight;
+                padding: 10px;
+            }
+        }
+
+        ul {
+            list-style: none;
+            white-space: nowrap;
+            padding: 0 25px 0 0;
+
+            li {
+                display: inline-block;
+                font-size: 1em;
+                white-space: normal;
+                width: calc(100%/3);
+                text-align: center;
+            }
+        }
+    }
+}
+
 .nap-data {
     h1 {
         text-align: center;
