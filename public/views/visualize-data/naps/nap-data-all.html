@@ -4,7 +4,7 @@
         <th>Duration</th>
         <th>Start Time</th>
         <th>Date</th>
-        <tr ng-repeat="nap in naps">
+        <tr ng-repeat="nap in naps | orderBy:'-timestamp'">
             <td>{{ nap.duration }}</td>
             <td>{{ nap.timestamp | date:'shortTime' }}</td>
             <td>{{ nap.timestamp | date:'mediumDate' }}</td>
