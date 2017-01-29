@@ -14,11 +14,32 @@ angular.module('app')
                     for (var i = 0; i < dataArray.length; i++) {
                         var obj = {
                             duration: convertMsToMin(dataArray[i].duration),
-                            timestamp: new Date(Date.parse(dataArray[i].timestamp))
+                            timestamp: new Date(Date.parse(dataArray[i].timestamp)),
+                            id: dataArray[i].$id
                         }
                         newArray.push(obj);
                     }
                     defer.resolve(newArray);
+                })
+                .catch(function(err) {
+                    console.log(err);
+                });
+
+            return defer.promise;
+        };
+
+        /***************** DELETE NAP *****************/
+        this.deleteNap = function(id) {
+            var defer = $q.defer();
+            var dataArray = $firebaseArray(naps.child('data'));
+            dataArray.$loaded()
+                .then(function() {
+                    var rec = dataArray.$getRecord(id);
+                    dataArray.$remove(rec).then(function() {
+                        defer.resolve('deleted');
+                        console.log('Resolved');
+                    });
+
                 })
                 .catch(function(err) {
                     console.log(err);

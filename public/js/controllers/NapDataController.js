@@ -13,6 +13,23 @@ angular.module('app')
                     console.log(error);
                 })
         };
+
+        /**************** DELETE NAP ****************/
+        $scope.deleteNap = function(id) {
+            console.log(id);
+            NapService.deleteNap(id)
+                .then(function(response) {
+                    for (var i = 0; i < $scope.naps.length; i++) {
+                        if ($scope.naps[i].id === id) {
+                            $scope.naps.splice(i, 1);
+                            break;
+                        }
+                    }
+                }, function() {
+                    console.log('An Error Occured.');
+                })
+
+        }
         /**************** GET DATE FILTER STRING ****************/
         function getDateFilterString() {
             var theDate = new Date();
