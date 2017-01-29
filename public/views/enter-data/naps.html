@@ -10,10 +10,12 @@
  -->
 
 <h1>Run Timer</h1>
-<basic-timer></basic-timer>
-<p>OR</p>
-<div class="button">
-  <span>Enter Time Manually</span>
-</div>
+<basic-timer ng-show="!manualEntry"></basic-timer>
+<manual-time-entry ng-show="manualEntry"></manual-time-entry>
 
-<manual-time-entry></manual-time-entry>
+<div class="timer-vs-manual-options">
+    <p class="or-prompt">Or</p>
+    <button class="toggle-button" ng-click="manualEntry = !manualEntry">
+        {{!manualEntry ? 'Enter Time Manually' : 'Use Timer'}}
+    </button>
+</div>
