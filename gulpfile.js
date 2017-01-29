@@ -41,7 +41,7 @@ gulp.task('build', ['build-css', 'build-js'], function() {
 });
 
 gulp.task('watch', function() {
-    return gulp.watch(['./public/**/*.html', './public/**/*.*css', './public/js/**/*.js'], ['build']);
+    return gulp.watch(['./public/**/*.html', './public/**/*.*css', './public/**/_*.*css', './public/js/**/*.js'], ['build']);
 });
 
 gulp.task('default', ['watch', 'build']);
