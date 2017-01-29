@@ -1,18 +1,29 @@
-.timer-vs-manual-options {
-    text-align: center;
+.nap-entry-container {
+    .text-container {
+        margin-bottom: 40px;
 
-    .or-prompt {
-        font-size: 2em;
+        h1,
+        p {
+            text-align: center;
+        }
     }
 
-    .toggle-button {
-        font-size: 1em;
-        background-color: $color-blue;
-        padding: 8px;
-        border: none;
-        border-radius: 1px;
-        margin-bottom: 15px;
-        outline: none;
-        cursor: pointer;
+    .timer-vs-manual-options {
+        text-align: center;
+
+        .or-prompt {
+            font-size: 2em;
+        }
+
+        .toggle-button {
+            font-size: 1em;
+            background-color: $color-blue;
+            padding: 8px;
+            border: none;
+            border-radius: 1px;
+            margin-bottom: 15px;
+            outline: none;
+            cursor: pointer;
+        }
     }
 }
