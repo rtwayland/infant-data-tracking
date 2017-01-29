@@ -6,17 +6,20 @@
     }
 
     .option-container {
-        width: 50%;
-        height: 300px;
+        width: 60%;
+        height: 100px;
         margin: auto;
         display: table;
+        @media screen and (max-width: 1275px) {
+            width: 80%;
+        }
 
         .enter-data,
         .visualize-data {
             position: relative;
             display: table-cell;
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
             cursor: pointer;
             border-radius: 1px;
             color: $color-text-dark;
