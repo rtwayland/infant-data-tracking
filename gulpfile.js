@@ -35,13 +35,13 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('build', ['build-css', 'build-js'], function() {
-    return gulp.src('./public/**/*.html')
+    return gulp.src(['./public/**/*.html', './public/**/*.csv', './public/infant-data-packing.json'])
         .pipe(cachebust.references())
         .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('watch', function() {
-    return gulp.watch(['./public/**/*.html', './public/**/*.*css', './public/**/_*.*css', './public/js/**/*.js'], ['build']);
+    return gulp.watch(['./public/**/*.html', './public/**/*.csv', './public/**/*.*css', './public/**/_*.*css', './public/js/**/*.js'], ['build']);
 });
 
 gulp.task('default', ['watch', 'build']);

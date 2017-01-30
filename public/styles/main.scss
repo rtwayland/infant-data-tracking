@@ -59,6 +59,20 @@ body {
     pointer-events: none;
 }
 
+svg {
+    display: block;
+    margin: auto;
+}
+
+.arc text {
+    font: 10px sans-serif;
+    text-anchor: middle;
+}
+
+.arc path {
+    stroke: #fff;
+}
+
 .nav-wrapper {
     height: $height-nav;
 }
@@ -74,15 +88,14 @@ body {
         text-decoration: none;
         color: $color-text-dark;
         // transition: background-color 0.5s linear;
-
         &:active,
         &:visited {
             text-decoration: none;
             color: $color-text-dark;
         }
 
-        &:hover,
-        &.current {
+        &.current,
+        &:hover {
             background-color: $color-highlight;
             padding: 20px;
         }
